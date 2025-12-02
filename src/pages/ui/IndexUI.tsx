@@ -34,13 +34,18 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
     >
       {/* Hero Section */}
       <section className="relative min-h-[600px] flex items-center justify-center overflow-hidden">
-        {/* Background Image */}
-        <div 
-          className="absolute inset-0 bg-cover bg-center"
-          style={{
-            backgroundImage: 'url(/src/assets/hero-flowers.jpg)'
-          }}
-        >
+        {/* Background Video */}
+        <div className="absolute inset-0">
+          <video 
+            autoPlay 
+            loop 
+            muted 
+            playsInline
+            className="w-full h-full object-cover"
+            poster="/videos/hero-flowers-poster.jpg"
+          >
+            <source src="/videos/hero-flowers.mp4" type="video/mp4" />
+          </video>
           <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-purple-600/80 to-secondary/90" />
         </div>
         
