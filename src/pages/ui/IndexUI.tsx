@@ -16,8 +16,9 @@ import type { UseIndexLogicReturn } from '@/components/headless/HeadlessIndex';
 interface IndexUIProps {
   logic: UseIndexLogicReturn;
 }
-
-export const IndexUI = ({ logic }: IndexUIProps) => {
+export const IndexUI = ({
+  logic
+}: IndexUIProps) => {
   const {
     collections,
     loading,
@@ -25,25 +26,14 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
     selectedCollectionId,
     filteredProducts,
     handleViewCollectionProducts,
-    handleShowAllProducts,
+    handleShowAllProducts
   } = logic;
-
-  return (
-    <EcommerceTemplate 
-      showCart={true}
-    >
+  return <EcommerceTemplate showCart={true}>
       {/* Hero Section */}
       <section className="relative min-h-[600px] flex items-center justify-center overflow-hidden">
         {/* Background Video */}
         <div className="absolute inset-0">
-          <video 
-            autoPlay 
-            loop 
-            muted 
-            playsInline
-            className="w-full h-full object-cover"
-            poster="/videos/hero-flowers-poster.jpg"
-          >
+          <video autoPlay loop muted playsInline className="w-full h-full object-cover" poster="/videos/hero-flowers-poster.jpg">
             <source src="/videos/hero-flowers.mp4" type="video/mp4" />
           </video>
           <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-purple-600/80 to-secondary/90" />
@@ -58,19 +48,18 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
             Aprende el arte floral con nuestros talleres creativos. Diseña, crea y lleva a casa hermosas creaciones florales.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-in fade-in slide-in-from-bottom-6 duration-700 delay-300">
-            <Button 
-              size="lg" 
-              className="bg-white text-primary hover:bg-white/90 font-semibold text-lg px-8 py-6 rounded-full shadow-xl"
-              onClick={() => document.getElementById('products')?.scrollIntoView({ behavior: 'smooth' })}
-            >
+            <Button size="lg" className="bg-white text-primary hover:bg-white/90 font-semibold text-lg px-8 py-6 rounded-full shadow-xl" onClick={() => document.getElementById('products')?.scrollIntoView({
+            behavior: 'smooth'
+          })}>
               Ver Talleres
             </Button>
-            <Button 
-              size="lg" 
-              variant="outline" 
-              className="border-2 border-white text-white hover:bg-white hover:text-primary font-semibold text-lg px-8 py-6 rounded-full shadow-xl"
-              onClick={() => document.getElementById('collections')?.scrollIntoView({ behavior: 'smooth' })}
-            >
+            <Button size="lg" variant="outline" className="border-2 border-white text-white hover:bg-white hover:text-primary font-semibold text-lg px-8 py-6 rounded-full shadow-xl" onClick={() => document.getElementById('collections')?.scrollIntoView({
+            behavior: 'smooth'
+          })} style={{
+            color: "#7f2f2f",
+            letterSpacing: "0px",
+            borderWidth: "1px"
+          }}>
               Explorar Colecciones
             </Button>
           </div>
@@ -81,8 +70,7 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
       </section>
 
       {/* Collections Section */}
-      {!loadingCollections && collections.length > 0 && (
-        <section id="collections" className="py-20 bg-gradient-to-b from-background to-muted/30">
+      {!loadingCollections && collections.length > 0 && <section id="collections" className="py-20 bg-gradient-to-b from-background to-muted/30">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-4xl font-bold text-foreground mb-4">
@@ -94,64 +82,38 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {collections.map((collection) => (
-                <CollectionCard 
-                  key={collection.id} 
-                  collection={collection} 
-                  onViewProducts={handleViewCollectionProducts} 
-                />
-              ))}
+              {collections.map(collection => <CollectionCard key={collection.id} collection={collection} onViewProducts={handleViewCollectionProducts} />)}
             </div>
           </div>
-        </section>
-      )}
+        </section>}
 
       {/* Products Section */}
       <section id="products" className="py-20 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold text-foreground mb-4">
-              {selectedCollectionId 
-                ? `${collections.find(c => c.id === selectedCollectionId)?.name}` 
-                : 'Nuestros Talleres'
-              }
+              {selectedCollectionId ? `${collections.find(c => c.id === selectedCollectionId)?.name}` : 'Nuestros Talleres'}
             </h2>
             <p className="text-lg text-muted-foreground">
               Reserva tu lugar en nuestros talleres creativos
             </p>
           </div>
           
-          {selectedCollectionId && (
-            <div className="flex justify-center mb-8">
-              <Button 
-                variant="outline" 
-                onClick={handleShowAllProducts}
-                className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
-              >
+          {selectedCollectionId && <div className="flex justify-center mb-8">
+              <Button variant="outline" onClick={handleShowAllProducts} className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
                 Ver Todos los Talleres
               </Button>
-            </div>
-          )}
+            </div>}
           
-          {loading ? (
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-              {[...Array(8)].map((_, i) => (
-                <div key={i} className="bg-muted rounded-lg h-80 animate-pulse"></div>
-              ))}
-            </div>
-          ) : filteredProducts.length > 0 ? (
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-              {filteredProducts.map((product) => (
-                <ProductCard key={product.id} product={product} />
-              ))}
-            </div>
-          ) : (
-            <div className="text-center py-12">
+          {loading ? <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+              {[...Array(8)].map((_, i) => <div key={i} className="bg-muted rounded-lg h-80 animate-pulse"></div>)}
+            </div> : filteredProducts.length > 0 ? <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+              {filteredProducts.map(product => <ProductCard key={product.id} product={product} />)}
+            </div> : <div className="text-center py-12">
               <p className="text-muted-foreground">
                 No products available.
               </p>
-            </div>
-          )}
+            </div>}
         </div>
       </section>
 
@@ -159,6 +121,5 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
       <NewsletterSection />
 
       <FloatingCart />
-    </EcommerceTemplate>
-  );
+    </EcommerceTemplate>;
 };
