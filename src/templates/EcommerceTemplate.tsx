@@ -69,6 +69,12 @@ export const EcommerceTemplate = ({
                 Products
               </ScrollLink>
               <Link 
+                to="/cotizador" 
+                className="text-foreground/70 hover:text-foreground transition-colors"
+              >
+                Cotizador
+              </Link>
+              <Link 
                 to="/blog" 
                 className="text-foreground/70 hover:text-foreground transition-colors"
               >
