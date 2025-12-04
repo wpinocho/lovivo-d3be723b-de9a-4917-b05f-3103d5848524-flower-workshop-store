@@ -53,7 +53,7 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 style={{ fontSize: '70px', letterSpacing: '0px',
               backgroundColor: '#e23c3c',
-              opacity: '0.81', }} className="text-5xl md:text-7xl font-bold text-white mb-6 drop-shadow-lg animate-in fade-in slide-in-from-bottom-4 duration-700">Talleres de Flores cambinados</h1>
+              opacity: '0.81', }} className="text-5xl md:text-7xl font-bold text-white mb-6 drop-shadow-lg animate-in fade-in slide-in-from-bottom-4 duration-700">Talleres de Flores cambinadosnin</h1>
           <p style={{ color: '#000000', fontSize: '18px', fontWeight: '700', fontStyle: 'italic', textAlign: 'right', lineHeight: '1', letterSpacing: '2px', paddingTop: '33px', paddingRight: '-16px', paddingBottom: '26px', paddingLeft: '-26px', marginTop: '74px', opacity: '0.6', borderWidth: '5px', borderColor: '#141414', borderRadius: '3px' }} className="text-xl md:text-2xl text-white/95 mb-8 max-w-3xl mx-auto drop-shadow-md animate-in fade-in slide-in-from-bottom-5 duration-700 delay-150">Aprende el arte floral con nuestros talleres creativos. Diseña, crea y lleva a casa hermosas creaciones florales. las mas lindas</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-in fade-in slide-in-from-bottom-6 duration-700 delay-300">
             <Button 
