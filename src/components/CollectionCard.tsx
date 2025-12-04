@@ -53,7 +53,13 @@ export const CollectionCard = ({ collection, onViewProducts }: CollectionCardPro
           
           <Button 
             className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold py-6 rounded-xl shadow-lg group-hover:shadow-xl group-hover:shadow-primary/30 transition-all"
-            onClick={() => onViewProducts(collection.id)}
+            onClick={() => {
+              onViewProducts(collection.id);
+              // Hacer scroll a la sección de productos
+              setTimeout(() => {
+                document.getElementById('products')?.scrollIntoView({ behavior: 'smooth' });
+              }, 100);
+            }}
           >
             Ver Talleres
           </Button>
