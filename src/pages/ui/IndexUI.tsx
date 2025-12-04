@@ -120,10 +120,8 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
       {!loadingCollections && collections.length > 0 && (
         <section id="collections" className="py-20 bg-gradient-to-b from-background to-muted/30">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-4xl font-bold text-foreground mb-4">
-                Nuestras Colecciones
-              </h2>
+            <div style={{ backgroundColor: '#d58181' }} className="text-center mb-12">
+              <h2 style={{ letterSpacing: '0px' }} className="text-4xl font-bold text-foreground mb-4">Nuestras Colecciones muuuu</h2>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
                 Elige la experiencia perfecta para ti, desde talleres para principiantes hasta tÃ©cnicas avanzadas
               </p>
