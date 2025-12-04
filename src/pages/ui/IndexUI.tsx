@@ -63,14 +63,12 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
             >
               Ver Talleres
             </Button>
-            <Button 
+            <Button style={{ letterSpacing: '0px', backgroundColor: '#e13d3d', borderWidth: '1px' }} 
               size="lg" 
               variant="outline" 
               className="border-2 border-white text-white hover:bg-white hover:text-primary font-semibold text-lg px-8 py-6 rounded-full shadow-xl"
               onClick={() => document.getElementById('collections')?.scrollIntoView({ behavior: 'smooth' })}
-            >
-              Explorar Colecciones
-            </Button>
+            >Explorar Colecciones!!</Button>
           </div>
         </div>
         
