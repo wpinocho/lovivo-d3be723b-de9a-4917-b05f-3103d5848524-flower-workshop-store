@@ -118,7 +118,14 @@ export const EcommerceTemplate = ({
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Brand */}
           <div>
-            <div className="text-2xl font-bold mb-2">🌸 Talleres de Flores</div>
+            <div className="flex items-center gap-3 mb-2">
+              <img 
+                src="/src/assets/logo.png" 
+                alt="Talleres de Flores Logo" 
+                className="h-10 w-10 object-contain"
+              />
+              <span className="text-2xl font-bold text-white">Talleres de Flores</span>
+            </div>
             <p className="mt-4 text-white/90">
               Aprende el arte floral con los mejores expertos
             </p>
