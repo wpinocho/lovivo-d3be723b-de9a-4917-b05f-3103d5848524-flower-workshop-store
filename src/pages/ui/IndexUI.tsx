@@ -82,7 +82,7 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
             {/* Image */}
             <div className="order-2 md:order-1">
               <img 
-                src="https://ptgmltivisbtvmoxwnhd.supabase.co/storage/v1/object/public/message-images/3ab6fc13-781a-4acf-88ca-c4e4421810f9/1764878109231-s13ocufwg8i.jpg" 
+                src="https://ptgmltivisbtvmoxwnhd.supabase.co/storage/v1/object/public/product-images/d3be723b-de9a-4917-b05f-3103d5848524/founder-edited.jpg" 
                 alt="Fundador de Talleres de Flores"
                 className="rounded-2xl shadow-2xl w-full h-[500px] object-cover"
               />
