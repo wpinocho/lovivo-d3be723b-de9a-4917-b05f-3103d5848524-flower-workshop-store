@@ -51,9 +51,7 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
         
         {/* Content */}
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 drop-shadow-lg animate-in fade-in slide-in-from-bottom-4 duration-700">
-            Talleres de Flores
-          </h1>
+          <h1 style={{ fontSize: '70px', letterSpacing: '0px' }} className="text-5xl md:text-7xl font-bold text-white mb-6 drop-shadow-lg animate-in fade-in slide-in-from-bottom-4 duration-700">Talleres de Flores cambinados</h1>
           <p className="text-xl md:text-2xl text-white/95 mb-8 max-w-3xl mx-auto drop-shadow-md animate-in fade-in slide-in-from-bottom-5 duration-700 delay-150">
             Aprende el arte floral con nuestros talleres creativos. Diseña, crea y lleva a casa hermosas creaciones florales.
           </p>
