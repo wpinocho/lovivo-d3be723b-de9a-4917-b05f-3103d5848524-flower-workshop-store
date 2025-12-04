@@ -54,21 +54,20 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
           <h1 style={{ fontSize: '70px', letterSpacing: '0px',
               backgroundColor: '#e23c3c',
               opacity: '0.81', }} className="text-5xl md:text-7xl font-bold text-white mb-6 drop-shadow-lg animate-in fade-in slide-in-from-bottom-4 duration-700">Talleres de Flores cambinadosnin</h1>
-          <p style={{ color: '#000000', fontSize: '18px', fontWeight: '700', fontStyle: 'italic', textAlign: 'right', lineHeight: '1', letterSpacing: '2px', paddingTop: '33px', paddingRight: '-16px', paddingBottom: '26px', paddingLeft: '-26px', marginTop: '74px', opacity: '0.6', borderWidth: '5px', borderColor: '#141414', borderRadius: '3px' }} className="text-xl md:text-2xl text-white/95 mb-8 max-w-3xl mx-auto drop-shadow-md animate-in fade-in slide-in-from-bottom-5 duration-700 delay-150">Aprende el arte floral con nuestros talleres creativos. Diseña, crea y lleva a casa hermosas creaciones florales. las mas lindas</p>
+          <p style={{ color: '#000000', fontSize: '18px', fontWeight: '700', fontStyle: 'italic', textAlign: 'right', lineHeight: '1', letterSpacing: '2px', paddingTop: '33px', paddingRight: '-16px', paddingBottom: '26px', paddingLeft: '-26px', marginTop: '74px', opacity: '0.6', borderWidth: '4px', borderColor: '#141414', borderRadius: '3px',
+              backgroundColor: '#dfcece', }} className="text-xl md:text-2xl text-white/95 mb-8 max-w-3xl mx-auto drop-shadow-md animate-in fade-in slide-in-from-bottom-5 duration-700 delay-150">Aprende el arte floral con nuestros talleres creativos. Diseña, crea y lleva a casa hermosas creaciones florales. las mas lindas</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-in fade-in slide-in-from-bottom-6 duration-700 delay-300">
             <Button 
               size="lg" 
               className="bg-white text-primary hover:bg-white/90 font-semibold text-lg px-8 py-6 rounded-full shadow-xl"
               onClick={() => document.getElementById('products')?.scrollIntoView({ behavior: 'smooth' })}
-            >
-              Ver Talleres
-            </Button>
+            >Ver Talleres!</Button>
             <Button style={{ letterSpacing: '0px', backgroundColor: '#724646', borderWidth: '0px' }} 
               size="lg" 
               variant="outline" 
               className="border-2 border-white text-white hover:bg-white hover:text-primary font-semibold text-lg px-8 py-6 rounded-full shadow-xl"
               onClick={() => document.getElementById('collections')?.scrollIntoView({ behavior: 'smooth' })}
-            >Explorar Colecciones!!</Button>
+            >Explorar Colecciones!! Ahora!</Button>
           </div>
         </div>
         
