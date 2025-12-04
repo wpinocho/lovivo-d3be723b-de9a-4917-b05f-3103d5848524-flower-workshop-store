@@ -75,6 +75,47 @@ export const IndexUI = ({ logic }: IndexUIProps) => {
         <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-background to-transparent" />
       </section>
 
+      {/* Founder Section */}
+      <section className="py-20 bg-background">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            {/* Image */}
+            <div className="order-2 md:order-1">
+              <img 
+                src="https://ptgmltivisbtvmoxwnhd.supabase.co/storage/v1/object/public/message-images/3ab6fc13-781a-4acf-88ca-c4e4421810f9/1764878109231-s13ocufwg8i.jpg" 
+                alt="Fundador de Talleres de Flores"
+                className="rounded-2xl shadow-2xl w-full h-[500px] object-cover"
+              />
+            </div>
+            
+            {/* Content */}
+            <div className="order-1 md:order-2 space-y-6">
+              <h2 className="text-4xl md:text-5xl font-bold text-foreground">
+                Nuestra Pasión por las Flores
+              </h2>
+              <div className="h-1 w-24 bg-gradient-to-r from-primary to-secondary rounded-full"></div>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                Nuestro fundador descubrió el arte floral como una forma de expresión y conexión con la naturaleza. 
+                Cada taller es diseñado con el corazón, compartiendo técnicas y secretos que han sido perfeccionados 
+                a través de años de dedicación.
+              </p>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                La pasión por las flores no es solo crear arreglos hermosos, sino entender el lenguaje único de cada 
+                pétalo y transmitir emociones a través de cada creación. En Talleres de Flores, no solo enseñamos 
+                técnicas, compartimos una filosofía de vida.
+              </p>
+              <Button 
+                size="lg" 
+                className="bg-gradient-to-r from-primary to-secondary text-white hover:opacity-90 font-semibold text-lg px-8 py-6 rounded-full shadow-xl"
+                onClick={() => document.getElementById('products')?.scrollIntoView({ behavior: 'smooth' })}
+              >
+                Conoce Nuestros Talleres
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Collections Section */}
       {!loadingCollections && collections.length > 0 && (
         <section id="collections" className="py-20 bg-gradient-to-b from-background to-muted/30">
