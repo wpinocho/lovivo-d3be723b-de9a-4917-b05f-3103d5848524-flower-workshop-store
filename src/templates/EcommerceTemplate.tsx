@@ -120,7 +120,7 @@ export const EcommerceTemplate = ({
           <div>
             <div className="flex items-center gap-3 mb-2">
               <img 
-                src="https://ptgmltivisbtvmoxwnhd.supabase.co/storage/v1/object/public/product-images/d3be723b-de9a-4917-b05f-3103d5848524/logo-transparent.png"
+                src="https://ptgmltivisbtvmoxwnhd.supabase.co/storage/v1/object/public/product-images/d3be723b-de9a-4917-b05f-3103d5848524/logo-no-background.png"
                 alt="Talleres de Flores Logo" 
                 className="h-10 w-10 object-contain"
               />
